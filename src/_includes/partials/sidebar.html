@@ -1,13 +1,7 @@
 <aside class="sidebar [ bg-dark-glare color-light ]">
     <div class="sidebar__inner-wrapper">
         <div class="sidebar__profile-image">
-            <img 
-                width="320"
-                height="360"
-                src="{% croppedUrlFor site.profileImage, 320,360 %}"
-                srcset="{% croppedUrlFor site.profileImage, 320,360, %} 1x, {% croppedUrlFor site.profileImage, 640,720 %} 2x"
-                alt="{{ altText }}"
-            >
+ 
         </div>
         <div class="sidebar__content  px-700 py-800 flow flow-space-600 md:px-800">
             {{ '/src/_includes/partials/svg/name.svg' | svgContents("fill-current h-full") | safe }}
