@@ -13,8 +13,8 @@ const sanity = {
   projectId,
   dataset: 'production',
   apiVersion: '2021-10-06',
-  useCdn: true
+  useCdn: false
 }
 
 
-module.exports = sanityClient({...sanity, useCdn: !process.env.SANITY_READ_TOKEN, token: process.env.SANITY_READ_TOKEN});
+module.exports = sanityClient({...sanity});
