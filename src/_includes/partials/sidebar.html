@@ -2,10 +2,10 @@
     <div class="sidebar__inner-wrapper">
         <div class="sidebar__profile-image">
             <img 
-                width="400"
-                height="450"
-                src="{% croppedUrlFor site.profileImage, 400,450 %}"
-                srcset="{% croppedUrlFor site.profileImage, 400,450 %} 1x, {% croppedUrlFor site.profileImage, 800,900 %} 2x"
+                width="320"
+                height="360"
+                src="{% croppedUrlFor site.profileImage, 320,360 %}"
+                srcset="{% croppedUrlFor site.profileImage, 320,360, %} 1x, {% croppedUrlFor site.profileImage, 640,720 %} 2x"
                 alt="{{ altText }}"
             >
         </div>
