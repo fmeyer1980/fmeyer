@@ -1,0 +1,286 @@
+$gorko-size-scale: (
+  'none': 0rem,
+  'xs': 0.3125rem,
+  'sm': 0.625rem,
+  'base': 1rem,
+  '100': var(--size-100),
+  '150': calc(var(--size-100) * 1.15),
+  '200': var(--size-200),
+  '300': var(--size-300),
+  '400': var(--size-400),
+  '500': var(--size-500),
+  '550': calc(var(--size-500) + 2px),
+  '600': var(--size-600),
+  '700': var(--size-700),
+  '750': calc(var(--size-700) * 1.1),
+  '800': var(--size-800),
+  '900': var(--size-900),
+  'full': '100%',
+  'half': '50%',
+  'third': '33.333%',
+  'quarter': '25%',
+  'tiny': '8.5rem',
+  'short': '15rem',
+  'mid': '21rem',
+  'long': '26rem',
+  'major': '30rem',
+);
+
+$gorko-colors: (
+  'primary-glare': #CBB3D8,
+  'primary': #B875DA,
+  'secondary': #C657B8,
+  'white': #FCE5D8,
+  'dark-glare': #483351,
+  'dark': #3B2643,
+  'dark-shade': #36213E,
+  'dark-shade-darker': #2F1C36,
+  'black': #211226,
+);
+
+$gorko-config: (
+  'bg': (
+    'items': $gorko-colors,
+    'output': 'standard',
+    'property': 'background',
+  ),
+  'color': (
+    'items': $gorko-colors,
+    'output': 'standard',
+    'property': 'color',
+  ),
+  'flow-space': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': '--flow-space',
+  ),
+  'font': (
+    'items': (
+      "base": '"helveticaNeue", Roboto, Arial, sans-serif',
+      "heading": '"avantGarden", Roboto, Arial, sans-serif',
+    ),
+    'output': 'standard',
+    'property': 'font-family',
+  ),
+  'm': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'margin',
+  ),
+  'mx': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'margin-inline',
+  ),
+  'ml': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'margin-inline-start',
+  ),
+  'mr': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'margin-inline-end',
+  ),
+  'my': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'margin-block',
+  ),
+  'mt': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'margin-block-start',
+  ),
+  'mb': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'margin-block-end',
+  ),
+  'p': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'padding',
+  ),
+  'px': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'padding-inline',
+  ),
+  'pl': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'padding-inline-start',
+  ),
+  'pr': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'padding-inline-end',
+  ),
+  'py': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'padding-block',
+  ),
+  'pt': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'padding-block-start',
+  ),
+  'pb': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'padding-block-end',
+  ),
+  'leading': (
+    'items': (
+      'loose': 1.7,
+      'normal': 1.5,
+      'mid': 1.4,
+      'tight': 1.3,
+      'flat': '1.1',
+      'none': '1',
+    ),
+    'output': 'standard',
+    'property': 'line-height',
+  ),
+  'measure': (
+    'items': (
+      'micro': '15ch',
+      'compact': '30ch',
+      'short': '40ch',
+      'long': '70ch',
+    ),
+    'output': 'responsive',
+    'property': 'max-width',
+  ),
+  'text': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'font-size',
+  ),
+  'weight': (
+    'items': (
+      'light': 300,
+      'normal': 400,
+      'bold': 900,
+    ),
+    'output': 'standard',
+    'property': 'font-weight',
+  ),
+  'w': (
+    'items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'width',
+  ),
+  'h': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'height',
+  ),
+  'd': (
+    'items': (
+      'hidden': 'none',
+      'block': 'block',
+      'flex': 'flex',
+      'grid': 'grid'
+    ),
+    'output': 'responsive',
+    'property': 'display',
+  ),
+  'items': (
+    'items': (
+      'start': 'flex-start',
+      'end': 'flex-end',
+      'center': 'center'
+    ),
+    'output': 'standard',
+    'property': 'align-items',
+  ),
+  'self': (
+    'items': (
+      'start': 'flex-start',
+      'end': 'flex-end',
+      'center': 'center'
+    ),
+    'output': 'standard',
+    'property': 'align-self',
+  ),
+  'flex-direction': (
+    'items': (
+      'row': 'row',
+      'row-reverse': 'row-reverse',
+      'col': 'column',
+      'col-reverse': 'col-reverse'
+    ),
+    'output': 'responsive',
+    'property': 'flex-direction',
+  ),
+  'grid-cols': (
+    'items': (
+      1: 'repeat(1, 1fr)',
+      2: 'repeat(2, 1fr)',
+      3: 'repeat(3, 1fr)',
+      4: 'repeat(4, 1fr)',
+      5: 'repeat(5, 1fr)',
+      6: 'repeat(6, 1fr)',
+      7: 'repeat(7, 1fr)',
+      8: 'repeat(8, 1fr)',
+      9: 'repeat(9, 1fr)',
+      10: 'repeat(10, 1fr)',
+      11: 'repeat(11, 1fr)',
+      12: 'repeat(12, 1fr)'
+    ),
+    'output': 'responsive',
+    'property': 'grid-template-columns'
+  ),
+  'gap': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'gap',
+  ),
+  'opc': (
+    'items': (
+      '10': '.1',
+      '20': '.2',
+      '25': '.25',
+      '50': '.5',
+      '70': '.7',
+      '80': '.8',
+      '90': '.9',
+      '100': '1'
+    ),
+    'output': 'standard',
+    'property': 'opacity',
+  ),
+  'decoration': (
+    'items': (
+      'underline': 'underline',
+      'line-through': 'line-through',
+      'no-underline': 'no-underline',
+    ),
+    'output': 'standard',
+    'property': 'text-decoration',
+  ),
+  'text-space': (
+    'items': (
+      'tight': - 0.04em,
+      'loos': 0.04em,
+    ),
+    'output': 'standard',
+    'property': 'letter-spacing',
+  ),
+  'pos': (
+    'items': (
+      'relative': 'relative',
+      'absolute': 'absolute',
+    ),
+    'output': 'standard',
+    'property': 'letter-spacing',
+  ),
+  'breakpoints': (
+    'md': '(min-width: 48em)',
+    'lg': '(min-width: 80em)',
+    'xl': '(min-width: 100em)'
+  ),
+);

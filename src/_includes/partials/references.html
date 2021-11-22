@@ -1,0 +1,34 @@
+<div class="mx-700 md:ml-900">
+    <h2 class="pt-800">Seneste referencer</h2>
+    <div class="reel gap-500 mt-600" style="max-width: 100%">
+        {% for item in home.references %}
+            <figure class="featured-work flow flow-space-300">
+                <a target="_blank" rel="noreferrer" aria-label="Link til {{ item.name }}" href="{{ item.externalLink.current }}" class="featured-work__image-wrapper image-overlay">
+                    <img class="w-full h-full"
+                        loading="lazy"
+                        width="320" height="380"
+                        sizes="(max-width: 600px) 70vw, 40vw"
+                        srcset="{% croppedUrlFor item.Image, 640, 760 %} 1440w,
+                                {% croppedUrlFor item.Image, 480, 570 %} 1024w,
+                                {% croppedUrlFor item.Image, 320, 380 %} 600w"
+                        src="{% croppedUrlFor item.Image, 320, 380 %}"
+                        alt="{{ item.Image.asset.altText }}"
+                    >
+                </a>
+                <figcaption class="featured-work__content [ flow ]">
+                    <a target="_blank" rel="noreferrer" href="{{ item.externalLink.current }}" class="h3 leading-none">{{ item.name }}</a>
+                    <hr>
+                    <p class="text-150 leading-mid opc-80">{{ item.teaserText }}</p>
+                    {% if item.categories %}
+                        <ul class="teknologies text-100 cluster gap-xs">
+                            {% for item in item.categories %}
+                            <li>{{ item.name | lower }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <a target="_blank" rel="noreferrer" href="{{ item.externalLink.current }}" class="btn" data-type="primary">Besøg {{ item.name | lower }}</a>
+                </figcaption>
+            </figure>
+        {% endfor %}
+    </div>
+</div>

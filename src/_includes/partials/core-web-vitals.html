@@ -1,0 +1,23 @@
+<div class="core-web-vitals flow flow-space-700">
+    <ul class="primary-list cluster-grow gap-500">
+        {% for item in home.coreWebVitals.scoreCardList %}
+            <li class="primary-list__item">
+                <h3 class="h5">{{ item.title }}</h3>
+                <div>
+                    {{ item.score }}%
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    <ul class="metrics-list auto-grid text-200 mt-400">
+        {% for item in home.coreWebVitals.metricsList %}
+            <li class="metrics-list__item gap-200 p-200">
+                <p>{{ item.title }}</p>
+                <strong>{{ item.score }}</strong>
+                {{ '/src/_includes/partials/svg/checkmark.svg' | svgContents("fill-current") | safe }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a class="btn [ self-center ]" data-type="secondary" href="">Se mållingerne på web.dev</a>
+    <a class="btn [ self-center opc-80 flow-space-100 gap-sm ]" data-type="default"  href="">{{ '/src/_includes/partials/svg/github.svg' | svgContents("fill-current h-100") | safe }}<span>Se koden på github</span></a>
+</div>

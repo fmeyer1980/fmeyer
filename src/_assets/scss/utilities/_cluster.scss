@@ -1,0 +1,12 @@
+.cluster, .cluster-grow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cluster-grow{
+
+    > * {
+        flex-grow: 1;
+    }
+
+}

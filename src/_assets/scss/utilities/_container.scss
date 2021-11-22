@@ -1,0 +1,15 @@
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  padding-left: get-size('400');
+  padding-right: get-size('400');
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// .container{
+//   padding-left: calc(((100% - var(--container-width)) / 2) - var(--size-400) * 2);
+//   padding-right: calc(((100% - var(--container-width)) / 2) - var(--size-400) * 2);
+//   border-left: calc(var(--size-400) * 2) solid transparent;
+//   border-right: calc(var(--size-400) * 2) solid transparent;
+// }

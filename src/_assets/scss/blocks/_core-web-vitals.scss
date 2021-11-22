@@ -1,0 +1,74 @@
+.core-web-vitals{
+    --border-size: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    .primary-list{
+     
+        &__item{
+            background-color: get-color('dark');
+            border: dashed 1px rgba(get-color('white'), .2);
+            border-radius: 3px;
+            padding: get-size('550') get-size('300') get-size('600');
+            // aspect-ratio: 3 / 2;
+            position: relative;
+            z-index: -10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-basis: 20%;
+
+            h3{
+                margin-bottom: get-size('400');
+            }
+
+            > div{
+                position: relative;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                background-color: get-color('dark');
+                @include apply-utility('font','heading');
+                @include apply-utility('weight','bold');
+                font-size: get-size('100');
+                color: get-color('secondary');
+                display: grid;
+                place-items: center;
+
+                &::after{
+                    content: "";
+                    width: calc(3rem + var(--border-size));
+                    height: calc(3rem + var(--border-size));
+                    position: absolute;
+                    top: calc(-1 * var(--border-size) / 2);
+                    left: calc(-1 * var(--border-size)/ 2);
+                    background: linear-gradient(to left, get-color('primary'), get-color('secondary'));
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .metrics-list{
+        column-gap: get-size('500');
+        
+        &__item{
+            display: flex;
+            align-items: center;
+            border-bottom: dashed 1px rgba(get-color('white'), .2);
+
+            p{
+                flex-grow: 1;
+            }
+
+            strong{
+                flex-shrink: 0;
+            }
+        }
+    }
+    
+
+}

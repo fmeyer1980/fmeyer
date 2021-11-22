@@ -1,0 +1,27 @@
+.workplaces{
+    --padding-size: var(--size-600) 0;
+
+    @include media-query('md'){
+        --padding-size: var(--size-700);
+    }
+
+    &__item{
+        padding: var(--padding-size);
+        border-top: dashed 1px rgba(get-color('white'), .2);
+        
+
+        &:nth-child(odd){
+            background: linear-gradient(to left, rgba(get-color('dark-shade'), 0), get-color('dark'), rgba(get-color('dark-shade'), 0));
+        }
+
+        &:last-child{
+            border-bottom: dashed 1px rgba(get-color('white'), .2);
+        }
+
+        .year{
+            border: dashed 1px rgba(get-color('white'), .2);
+            border-radius: 3px;
+            padding: .4em 1em;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+<aside class="sidebar [ bg-dark-glare color-light ]">
+    <div class="sidebar__inner-wrapper">
+        <div class="sidebar__profile-image">
+            <img 
+                width="450"
+                height="513"
+                src="{% croppedUrlFor site.profileImage, 400,450 %}"
+                srcset="{% croppedUrlFor site.profileImage, 400,450 %} 1x, {% croppedUrlFor site.profileImage, 800,900 %} 2x"
+                alt="{{ altText }}"
+            >
+        </div>
+        <div class="sidebar__content  px-700 py-800 flow flow-space-600 md:px-800">
+            {{ '/src/_includes/partials/svg/name.svg' | svgContents("fill-current h-full") | safe }}
+            <hr/>
+            <div>
+                <h3>Kontakt info</h3>
+                <ul class="[ flow ] [ flow-space-xs ]">
+                    <li class="opc-80">{{ site.address }}</li>
+                    <li class="weight-bold"><span class="mr-sm">Telefon:</span><a class="decoration-underline" href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+                    <li class="weight-bold"><span class="mr-sm">E-mail:</span><a class="decoration-underline" href="mailto:{{ site.mail }}">{{ site.email }}</a></li>
+                </ul>
+            </div>
+            <hr/>
+            <div>
+                <div class="[ flow ] [ flow-space-300 ]">
+                    {{ site.aboutSection.text | sanityBlock | safe }}
+                </div>
+            </div>
+            <hr/>
+            <div>
+                <div class="[ flow ] [ flow-space-300 ]">
+                    {{ site.followSection.text | sanityBlock | safe }}
+                    <ul class="[ cluster ] [ pt-sm gap-100 ]">
+                        {% for item in site.followSection.follow %}
+                            <li><a class="btn text-100" data-type="secondary" rel="noreferrer" target="_blank" href="https://www.{{ item }}">{{ item }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <hr/>
+            <div class="sidebar__socialmedia">
+                <h3>Du kan følge mig på</h3>
+                <ul class="list [ cluster ] [ gap-sm ]">
+                    {% if site.socialmedia.facebook %}<li><a class="btn" data-type="secondary" target="_blank" rel="noreferrer" aria-label="Facebook" href="{{ site.socialmedia.facebook }}">{{ '/src/_includes/partials/svg/facebook.svg' | svgContents("fill-current h-half") | safe }}</a></li>{% endif %}
+                    {% if site.socialmedia.linkedin %}<li><a class="btn" data-type="secondary"  target="_blank" rel="noreferrer" aria-label="linkedin" href="{{ site.socialmedia.linkedin }}">{{ '/src/_includes/partials/svg/linkedin.svg' | svgContents("fill-current h-half") | safe }}</a></li>{% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    
+    
+    <!-- <div class="sidebar__inner-wrapper">
+        <div class="sidebar__image-wrapper">
+            <img 
+                width="450"
+                height="513"
+                src="{% croppedUrlFor site.profileImage, 480,540 %}"
+                srcset="{% croppedUrlFor site.profileImage, 480,540 %} 1x, {% croppedUrlFor site.profileImage, 960,1080 %} 2x"
+                alt="{{ altText }}"
+            >
+        </div>
+        <div class="sidebar__content [ flow ] [ flow-space-400 ]">
+            <div>
+              
+            </div>
+            <hr />
+            <h3>Kontakt info</h3>
+            <div class="[ flow-space-100 ]">
+                <ul class="">
+                    <li><strong class="mr-sm">Adresse:</strong>Møllegade 14A, 6690 Gørding</li>
+                    <li><strong class="mr-sm">Mobil:</strong><a href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+                    <li><strong class="mr-sm">Email:</strong><a href="mailto:{{ site.mail }}">{{ site.mail }}</a></li>
+                </ul>
+            </div>
+            <hr />
+            <h3>{{ about.headline }}</h3>
+            <p>{{ about.text }}</p>
+            <hr />
+            <h3>{{ interests.headline }}</h3>
+            <div class="[ flow-space-100 ]">
+                <ul class="[ flow ] [ flow-space-100 ]">
+                    {% for item in interests.list %}
+                        <li class="[ d-flex flex-direction-col ]"><strong class="[ text-200 ]">{{ item.headline }}</strong><a rel="noreferrer" target="_blank" href="{{ item.linkUrl }}">{{ item.linkUrl }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div> -->
+</aside>

@@ -1,0 +1,60 @@
+:root {
+  --gutter: var(--size-500);
+}
+/* @link https://utopia.fyi/space/calculator/?c=320,16,1.2,1360,18,1.25,5,2,&s=0.9|0.8|0.7,1.1|1.2|1.8|2.65|4|6,3xs-3xs|xs-xs|s-s|m-m|l-l|xl-xl|xl-2xl|2xl-3xl|3xl-4xl */
+
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1360;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc((var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)));
+}
+
+@media screen and (min-width: 1360px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+:root {
+  --fc-3xs-min: (var(--fc-s-min) * 0.7); 
+  --fc-3xs-max: (var(--fc-s-max) * 0.7);
+
+  --fc-2xs-min: (var(--fc-s-min) * 0.8); 
+  --fc-2xs-max: (var(--fc-s-max) * 0.8);
+
+  --fc-xs-min: (var(--fc-s-min) * 0.9); 
+  --fc-xs-max: (var(--fc-s-max) * 0.9);
+
+  --fc-s-min: (var(--f-0-min, 16)); 
+  --fc-s-max: (var(--f-0-max, 18));
+
+  --fc-m-min: (var(--fc-s-min) * 1.1); 
+  --fc-m-max: (var(--fc-s-max) * 1.1);
+
+  --fc-l-min: (var(--fc-s-min) * 1.2); 
+  --fc-l-max: (var(--fc-s-max) * 1.2);
+
+  --fc-xl-min: (var(--fc-s-min) * 1.8); 
+  --fc-xl-max: (var(--fc-s-max) * 1.8);
+
+  --fc-2xl-min: (var(--fc-s-min) * 2.65); 
+  --fc-2xl-max: (var(--fc-s-max) * 2.65);
+
+  --fc-3xl-min: (var(--fc-s-min) * 4); 
+  --fc-3xl-max: (var(--fc-s-max) * 4);
+
+  --fc-4xl-min: (var(--fc-s-min) * 6); 
+  --fc-4xl-max: (var(--fc-s-max) * 6);
+
+  --size-100: calc(((var(--fc-3xs-min) / 16) * 1rem) + (var(--fc-3xs-max) - var(--fc-3xs-min)) * var(--fluid-bp));
+  --size-200: calc(((var(--fc-xs-min) / 16) * 1rem) + (var(--fc-xs-max) - var(--fc-xs-min)) * var(--fluid-bp));
+  --size-300: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-s-min)) * var(--fluid-bp));
+  --size-400: calc(((var(--fc-m-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-m-min)) * var(--fluid-bp));
+  --size-500: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-l-min)) * var(--fluid-bp));
+  --size-600: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+  --size-700: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+  --size-800: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+  --size-900: calc(((var(--fc-3xl-min) / 16) * 1rem) + (var(--fc-4xl-max) - var(--fc-3xl-min)) * var(--fluid-bp));
+}

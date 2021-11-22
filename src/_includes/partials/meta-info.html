@@ -1,0 +1,17 @@
+{% set currentUrl = "https://fmeyer.dk/" %}
+
+<title>{{ home.meta.title }}</title>
+<link rel="canonical" href="{{ currentUrl }}" />
+
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:title" content="{{ home.meta.title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ currentUrl }}" />
+
+{% if metaDesc %}
+  <meta name="description" content="{{ home.meta.description }}" />
+  <meta name="twitter:description" content="{{ home.meta.description }}" />
+  <meta property="og:description" content="{{ home.meta.description }}" />
+{% endif %}
+
+<link rel="icon" href="/images/meta/favicon.svg" type="image/svg+xml" />

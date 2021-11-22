@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+{% set metaTitle = home.meta.title %}
+{% set metaDesc = home.meta.description %}
+
+{% block content %}
+
+<div class="main-content__top mx-700 lg:mx-900 [ flow ] [ pt-900 measure-long ]">
+    {% include 'partials/intro.html' %}
+    <hr>
+    {% include 'partials/skills.html' %}
+    <hr>
+</div>
+
+
+<div class="main-content__bottom  pb-900 bg-dark-shade flow ">
+    <svg class="gg css-filter" width="100%" viewBox="0 0 600 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0V350C0 350 20.3572 166.526 300 166.526C579.643 166.526 600 0 600 0H0Z" fill="#3B2643"/>
+    </svg>
+    {% include 'partials/references.html' %}
+
+    <div class="mx-700 lg:mx-900">
+        <div class="measure-long flow">
+            {% include 'partials/workplaces.html' %}
+            {{ home.contribute | sanityBlockContent | safe }}
+            {% include 'partials/core-web-vitals.html' %}
+        </div>
+    </div>
+
+    
+    
+
+
+        
+    
+</div>
+
+    
+
+{% endblock %}

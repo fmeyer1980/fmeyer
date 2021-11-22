@@ -1,0 +1,9 @@
+.columns{
+    @include media-query('md'){
+        column-count: 2;
+        column-gap: get-size('lg');
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}

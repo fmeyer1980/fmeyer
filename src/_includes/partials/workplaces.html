@@ -1,0 +1,16 @@
+<div class="[ flow ] [ flow-space-700 measure-long ]">
+    <h2 class="measure-compact">{{ home.workplaces.headline }}</h2>
+    <ul class="workplaces">
+        {% for item in home.workplaces.workplacesList %}
+            <li class="workplaces__item flow flow-space-500">
+                <div class="cluster items-center gap-500">
+                    {{ ('/src/_includes/partials/svg/'+(item.name | slug)+'.svg') | svgContents("fill-current "+ item.iconSize) | safe }}
+                    <span class="year text-100 opc-80">{{ item.years }}</span>
+                </div>
+                <div class="text-200 opc-80 measure-long">
+                    {{ item.text | sanityBlock | safe }}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

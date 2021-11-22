@@ -1,0 +1,70 @@
+.main-content{
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 60%;
+    // padding: get-size('900');
+    font-size: get-size('400');
+    border-left: dashed 1px rgba(get-color('white'), .2);
+
+    &__top{
+
+    }
+
+    &__bottom{
+      position: relative;
+      z-index: 1;
+      margin-top: calc(-1 * var(--size-800));
+
+      > svg{
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        filter: drop-shadow(0 1px 0 rgba(get-color('white'), .2));
+
+        // @include media-query('lg'){
+        //   top: calc(-1 * var(--size-800));
+        // }
+      }
+
+    }
+}
+
+
+
+
+
+.page-content{
+
+    blockquote {
+        border-inline-start: 1rem solid get-color('primary');
+        padding-inline-start: get-size('600');
+        padding-top: get-size('500');
+        padding-bottom: get-size('500');
+        font-style: italic;
+      }
+    
+      ol,
+      ul {
+        padding-inline-start: get-size('800');
+      }
+    
+      li + li {
+        margin-top: get-size('300');
+      }
+    
+      // Add a greater flow space for heading elements so
+      // they appear more like article sections
+      h2,
+      h3 {
+        --flow-space: #{get-size('800')};
+      }
+    
+      // Add tighter flow for elements that follow a heading
+      h2 + *,
+      h3 + * {
+        --flow-space: #{get-size('300')};
+      }
+}

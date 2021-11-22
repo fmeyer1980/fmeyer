@@ -1,0 +1,42 @@
+body {
+  @include apply-utility('font', 'base');
+  font-weight: 400;
+  font-size: get-size('200');
+  background-color: get-color('dark');
+  color: get-color('white');
+  @include apply-utility('leading', 'normal');
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: get-color('primary-glare');
+  color: get-color('dark-shade');
+}
+
+.fill-current{
+  fill: currentColor;
+}
+
+[x-cloak] { 
+  display: none !important; 
+}
+
+hr{
+  border: none;
+  border-bottom: dashed 1px rgba(get-color('white'), .15) !important;
+  margin-block-end: 0;
+  margin-inline: 0;
+}
+
+p:not([class]){
+  color: rgba(get-color('white'), .8)
+}
+
+strong:not([class]){
+  color: rgba(get-color('white'), 1)
+}

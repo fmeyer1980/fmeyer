@@ -1,0 +1,22 @@
+{% set assetHash = global.random() %}
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% include "partials/meta-info.html" %}
+    <style>{% include "css/critical.css" %} {% include "css/tokens.css" %}</style>
+    <link rel="stylesheet" media="print" href="/fonts/fonts.css" onload="this.media='all'" />
+  </head>
+    <body>
+    <main class="layout">
+        {% include "partials/sidebar.html" %}
+        <div class="main-content [ flow ] [ flow-space-800 ]">
+          {% block content %}
+              {{ content | safe }}
+          {% endblock %}
+        </div>
+    </main>
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>
