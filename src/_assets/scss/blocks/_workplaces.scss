@@ -2,7 +2,7 @@
     --padding-size: var(--size-600) 0;
 
     @include media-query('md'){
-        --padding-size: var(--size-700);
+        --padding-size: var(--size-700) var(--size-700);
     }
 
     &__item{
