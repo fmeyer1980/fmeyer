@@ -16,6 +16,7 @@ module.exports = function (config) {
   }
 
   config.addPassthroughCopy({ "src/_assets/fonts": "fonts" });
+  config.addPassthroughCopy({ "src/_assets/images": "images" });
   config.addPassthroughCopy({ "./src/_assets/js/main.js": "./js/main.js" });
   config.addPassthroughCopy("favicon.svg");
 
